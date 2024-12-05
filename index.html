@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
     <script src="script.js" defer></script>
     <title>Tudo De Bom</title>
 </head>
+
 <body>
 
     <!-- HEADER -->
     <header class="flex spaceBetween alignCenter">
         <a href=""><img src="assets/logoResto.png" alt="" class="logo"></a>
         <nav class="navHeader">
-            <ul class="flex spaceBetween alignCenter">
+            <ul class="flex spaceEvenly alignCenter">
                 <li><a href="">Nos menus</a></li>
                 <li><a href="">Nos events</a></li>
                 <li><a href="">A propos</a></li>
@@ -26,8 +28,8 @@
     <main>
 
         <!-- SECTION HERO -->
-        <Section id="hero" class="hero flex alignCenter bgHero">
-           <!--  <div class="container flex spaceBetween alignCenter center">
+        <section id="hero" class="hero flex alignCenter bgHero">
+            <!--  <div class="container flex spaceBetween alignCenter center">
                 <div>
                     <h1>Tudo de Bom - Restaurant Brésilien à Marseille</h1>
                     <p>Voyagez au cœur de la gastronomie brésilienne avec Tudo de Bom, votre restaurant à Marseille</p>
@@ -45,95 +47,136 @@
                     <img src="assets/plat-abdoul.png" alt="">
                 </div>
             </div> -->
-        </Section>
+        </section>
 
         <!-- SECTION PROMESSE CLIENT -->
-        <Section class="vh70 flex">
+        <section class="vh70 flex">
             <div id="promesse" class="container flex columnReverse spaceEvenly vh70 ">
-                <p>Une cuisine brésilienne authentique et savoureuse</p>
+                <!-- <p>Une cuisine brésilienne authentique et savoureuse</p>
                 <p class="flexEnd flex">Ambiance chaleureuse pour une expérience culinaire conviviale</p>
-                <p>Ingrédients de qualité pour des plats exquis</p>
+                <p>Ingrédients de qualité pour des plats exquis</p> -->
             </div>
-        </Section>
+        </section>
 
         <!-- SECTION MENU -->
         <section class="flex">
-            <div class="sectionMenu container flex">
+            <div id="" class="sectionMenu container flex">
                 <h2>Nos Menus</h2>
-                <div class="flex alignCenter spaceEvenly menu"> <!-- 1 Menu -->
-                    <div class="w40">
-                        <h3>Feijoada</h3>
-                        <p>Découvrez notre feijoada, un plat emblématique du Brésil. Un mélange délicieux de haricots noirs, de viande de porc et de saucisses, accompagné de riz et de légumes.</p>
-                    </div>
-                    <img src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/restaurant-bresilien/feijoada.webp" alt="">
-                </div>
-            </div>
-            
-        </section>
-
-
-         <!-- SECTION EVENT / Avis -->
-        <section class="flex section100">
-            <div class="flex container">
-
-                <!-- Partie Event -->
-                <div class="SectionSize flex ">
-                    <h2 class="SectionSizeh2">Nos Events</h2>
-                    <div class="event"> <!-- 1 event -->
-                        <img src="" alt="">
-                        <h3>Événements Culturels</h3>
-                        <p>Participez à nos événements culturels pour vivre l'ambiance du Brésil. Musique live, danse, et dégustation de plats authentiques pour une expérience immersive.</p>
-                    </div>
-                </div>
-
-                <!-- Partie Avis -->
-                <div class="sectionSize2">
-                    <h2 class="SectionSizeh2">Nos Avis</h2>
-                    <div class="avis"> <!-- 1 avis -->
-                        <img src="" alt="">
-                        <p>5/5</p>
-                        <p>Sophie</p>
-                        <p>Moqueca de Peixe</p>
-                        <p>La moqueca de peixe chez Tudo de Bom est un véritable délice. Les saveurs sont authentiques, et le poisson est toujours frais. Une expérience culinaire à ne pas manquer !</p>
-                    </div>
+                <div id="menu">
+                    <!-- <div class="flex alignCenter spaceEvenly menu">
+                        <div class="w40">
+                            <h3>Feijoada</h3>
+                            <p>Découvrez notre feijoada, un plat emblématique du Brésil. Un mélange délicieux de haricots noirs, de viande de porc et de saucisses, accompagné de riz et de légumes.</p>
+                        </div>
+                        <img src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/restaurant-bresilien/feijoada.webp" alt="">
+                    </div> -->
                 </div>
             </div>
 
-                <!-- <div class="scrollContainer">
-
-                        <div class="content">
-                    
-                        <div class="card">
-                            <img src="" alt="">
-                            <p>5/5</p>
-                            <p>Sophie</p>
-                            <p>Moqueca de Peixe</p>
-                            <p>La moqueca de peixe chez Tudo de Bom est un véritable délice. Les saveurs sont authentiques, et le poisson est toujours frais. Une expérience culinaire à ne pas manquer !</p>
-                            </div>
-                    </div>  -->
-                
-
-    
-    
         </section>
 
-          <!-- SECTION A PROPOS -->
+
+        <!-- SECTION EVENT / Avis -->
         <section class="flex">
-            <div class="container flex spaceEvenly">
-                <img src="" alt="">
+
+
+            <!-- Les services -->
+            <div id="service" class="servicesBox flex">
+                <img class="bgImg" src="leaves.png" alt="">
+                <!-- <div>
+                    <h3>Événements Culturels</h3>
+                    <p>Participez à nos événements culturels pour vivre l'ambiance du Brésil. Musique live, danse, et
+                        dégustation de plats authentiques pour une expérience immersive.</p>
+                </div>
                 <div>
+                    <h3>Cours de Cuisine</h3>
+                    <p>Participez à nos événements culturels pour vivre l'ambiance du Brésil. Musique live, danse, et
+                        dégustation de plats authentiques pour une expérience immersive.</p>
+                </div>
+                <div>
+                    <h3>Privatisation d'Espace</h3>
+                    <p>Participez à nos événements culturels pour vivre l'ambiance du Brésil. Musique live, danse, et
+                        dégustation de plats authentiques pour une expérience immersive.</p>
+                </div> -->
+            </div>
+
+            <!-- avis -->
+            <div class="avisBox flex">
+
+                <!-- container slider horizontal -->
+                <div class="sliderContainer">
+                    <div id="avis" class="sliderBox alignCenter">
+                        <!-- <div>
+                            <p>Nom prenom</p>
+                            <p>Moqueca de Peixe</p>
+                            <p>La moqueca de peixe chez Tudo de Bom est un véritable délice. Les saveurs sont
+                                authentiques, et le poisson est toujours frais. Une expérience culinaire à ne pas
+                                manquer !</p>
+                            <p>★ 4/5</p>
+                        </div>
+
+                        <div>
+                            <p>Nom prenom</p>
+                            <p>Moqueca de Peixe</p>
+                            <p>La moqueca de peixe chez Tudo de Bom est un véritable délice. Les saveurs sont
+                                authentiques, et le poisson est toujours frais. Une expérience culinaire à ne pas
+                                manquer !</p>
+                            <p>★ 4/5</p>
+                        </div>
+
+                        <div>
+                            <p>Nom prenom</p>
+                            <p>Moqueca de Peixe</p>
+                            <p>La moqueca de peixe chez Tudo de Bom est un véritable délice. Les saveurs sont
+                                authentiques, et le poisson est toujours frais. Une expérience culinaire à ne pas
+                                manquer !</p>
+                            <p>★ 4/5</p>
+                        </div>
+
+                        <div>
+                            <p>Nom prenom</p>
+                            <p>Moqueca de Peixe</p>
+                            <p>La moqueca de peixe chez Tudo de Bom est un véritable délice. Les saveurs sont
+                                authentiques, et le poisson est toujours frais. Une expérience culinaire à ne pas
+                                manquer !</p>
+                            <p>★ 4/5</p>
+                        </div>
+
+                        <div>
+                            <p>Nom prenom</p>
+                            <p>Moqueca de Peixe</p>
+                            <p>La moqueca Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quae porro
+                                accusantium aspernatur ipsum ipsam, odio molestiae obcaecati, sapiente, fugit similique
+                                excepturi illum tenetur cum et incidunt quas suscipit a?de peixe chez Tudo de Bom est un
+                                véritable délice. Les saveurs sont authentiques, et le poisson est toujours frais. Une
+                                expérience culinaire à ne pas manquer !</p>
+                            <p>★ 4/5</p>
+                        </div> -->
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION A PROPOS -->
+        <section class="flex">
+            <div class="aPropos container flex spaceEvenly alignCenter vh70">
+                <img src="assets/LogoResto.png" alt="">
+                <div class="w50">
                     <h2>Tudo De Bom</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cum sapiente maiores nam cupiditate asperiores sed fuga voluptatem. Natus, quo ullam cum delectus a pariatur voluptates ab magnam voluptas quasi?</p>
+                    <p></p>
                 </div>
             </div>
         </section>
 
-           <!-- SECTION LOCALISATION -->
+        <!-- SECTION LOCALISATION -->
         <section>
             <h2>Notre Adresse</h2>
-            <div>
-                <iframe src="" frameborder="0"></iframe>
-                <div>
+            <div class="flex">
+                <iframe src="" frameborder="0" class="w50"></iframe>
+                <div class="w50">
                     <p>Restaurant de St-Etienne</p>
                     <p>2 rue Gambetta</p>
                     <p>42000 Saint-Etienne</p>
@@ -155,7 +198,7 @@
                 <h3>Suivez Nous</h3>
                 <a href="">
                     <img src="" alt="">
-                    <p>Facebook</p> 
+                    <p>Facebook</p>
                 </a>
                 <a href="">
                     <img src="" alt="">
@@ -176,4 +219,5 @@
         <p>TUDO DO BEM © 2015</p>
     </footer>
 </body>
+
 </html>

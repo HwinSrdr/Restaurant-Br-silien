@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family:"Inter", sans-serif;
+    box-sizing: border-box; /* calcul la taille (hauteur et largeur) d'un element en incluant les padding et les border dans le calcul */
 }
 
 a {
@@ -62,23 +63,33 @@ li {
     height: 70vh;
 }
 
+.w50 {
+    width: 50%;
+}
+
 .w40 {
     width: 40%;
 }
 
+
+
 /* HEADER */
 
 header {
-    background-color: aquamarine;
+     background-color: #031A47;
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 5;
     width: 100%;
 }
 
+header a {
+    color: #FAB943;
+}
+
 .navHeader {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     width: 50%;
 }
 
@@ -137,55 +148,71 @@ background: linear-gradient(256deg, rgba(0,130,60,1) 22%, rgba(1,61,35,1) 50%);
 
 /* SECTION EVENT/AVIS */
 
-.section100 {
-    height: 150vh;
+
+/* coté services */ 
+.servicesBox {
+    width: 50%;
+    /*background-color: red;*/
+    padding: 100px 0;
+    gap: 15px;
+    position: relative;
 }
 
-
-/* Events */
-
-.SectionSize {
-    width: 500px;
-    height: auto;
-}
-
-.SectionSizeh2 {
-    padding: 30px 0 0 0;
-    width: 30vw;
-}
-
-.event {
+.servicesBox div {
     width: 80%;
-    height: 300px;
-    background-color: blue;
+    margin: auto;
+    z-index: 2;  
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+
+}
+
+/* Cote avis client */ 
+.avisBox {
+    width: 50%;
+    background-color: #709868;
+    align-items: center;
+    padding: 0 20px;
 }
 
 
-/* Avis */
-
-.SectionSize2 {
-    width: 300px;
-    height: auto;
+.sliderContainer{ /* la boite qui définit ce qui est "visible" */
+    width: 100%;
+    overflow-x: scroll;
 }
 
-.avis {
-    width: 30%;
-    height: 300px;
-    background-color: blue;
-}
-
-.scrollContainer {
-    width: 30%;
-    overflow-x: auto; 
-    background-color: red;
-}
-
-.content {
-    flex-wrap: nowrap;
+.sliderBox { /* la boite contenant les avis */
+    width: max-content;
     display: flex;
+    gap: 15px;
 }
 
-.card {
-    min-width: 30%;
-    max-width: 30%;
+.sliderBox div { /* chaque avis */ 
+    width: 220px;
+    backdrop-filter: blur(20px);
+    background-color:#ffffffab ;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.bgImg {
+    width: 300px;
+    position: absolute;
+    left: -20px; 
+}
+
+
+
+
+/* SECTION A PROPOS */
+
+.aPropos h2 {
+    padding-bottom: 30px;
+}
+
+.aPropos img {
+    width: 200px;
+    height: 200px;
 }

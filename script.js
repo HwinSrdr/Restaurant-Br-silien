@@ -9,10 +9,10 @@
 
 fetch(`data.json`)
 
-.then((rep) => {
-    
-    return rep.json()
-})
+    .then((rep) => {
+
+        return rep.json()
+    })
     .then(donnee => {
         //j'ai accès ici à ma donnée
         console.log(donnee)
@@ -23,22 +23,39 @@ fetch(`data.json`)
         //Je boucle sur le tableau de données:
 
 
-        donnee.plats.forEach(plat=>{
+        afficheInfoPrincipale(donnee)
+
+
+        donnee.plats.forEach(plat => {
             afficherUnPlat(plat)
         })
 
+
+        donnee.promessesClient.forEach(promesse => {
+            affichePromesses(promesse)
+        });
+
+        donnee.services.forEach(service => {
+            afficherUnService(service)
+        });
+
+        donnee.temoignages.forEach(avis => {
+            afficherUnAvis(avis)
+
+        });
+
     })
-    function affiche (desc) {
 
 
+// SECTION HERO
+function afficheInfoPrincipale(donnee) {
 
-    // SECTION HERO
 
-let hero = document.querySelector ("#hero")
-hero.innerHTML +=` 
-div class="container flex spaceBetween alignCenter center">
+    let hero = document.querySelector("#hero")
+    hero.innerHTML += ` 
+<div class="container flex spaceBetween alignCenter center">
                 <div>
-                    <h1> ${donnee.NomCommercial} </h1>
+                    <h1> ${donnee.nomCommercial} </h1>
                     <p> ${donnee.texteAccroche} </p>
                     <a href=""> ${donnee.texteBouton} </a>
                     <div>
@@ -55,36 +72,78 @@ div class="container flex spaceBetween alignCenter center">
                 </div>
             </div>`;
 
-
-            // SECTION PROMESSE
-            let listePro = "";
-            desc.promessesClients.forEach(promesse=>{
-                let sectionPromesse = document.querySelector ("#promesse")
-                sectionPromesse.innerHTML += 
-                listePro+= `<p> ${promesse} </p> `
-                
-            })
-            console.log(listeIng)
+}
 
 
-            // SECTION MENUS
-            function afficherUnPlat (plat) {
-            let listeMenu ="";
-            desc.plats.forEach(plat => {
-                listeMenu += `
+
+// SECTION MENUS
+function afficherUnPlat(plat) {
+
+    let menuContainer = document.querySelector("#menu")
+    menuContainer.innerHTML += `
                 <div class="flex alignCenter spaceEvenly menu"> <!-- 1 Menu -->
                     <div class="w40">
                         <h3> ${plat.nom} </h3>
                         <p> ${plat.desc} </p>
                     </div>
                     <img src=" ${plat.imageUrl} " alt="">
-                </div> `
-                
-            });
-            console.log(listeMenu)
+                </div> `;
+
 
 
 
 }
 
-    }
+
+
+
+//SECTION PROMESSE
+
+
+//role : afficher les promesse 
+// parametre : la promesse recuperé par la boucle
+// retourne : non
+
+function affichePromesses(promesse) {
+
+    let promesseContainer = document.querySelector("#promesse")
+    promesseContainer.innerHTML += `
+    <p> ${promesse} </p> `;
+
+}
+
+
+
+
+// SECTION EVENTS
+
+//role : afficher les services
+//paramètres : les services récupéré par la boucle
+//retourne : non
+
+function afficherUnService(service) {
+    let serviceContainer = document.querySelector("#service")
+    serviceContainer.innerHTML += `
+        <div>
+                    <h3> ${service.nom} </h3>
+                    <p> ${service.desc} </p>
+                </div> `
+}
+
+
+//SECTION AVIS
+
+//role: afficher les avis
+//paramètres : les avis récupéré par la boucle
+//retourne : non
+
+function afficherUnAvis(avis) {
+    let avisContainer = document.querySelector("#avis")
+    avisContainer.innerHTML += `
+    <div>
+                            <p> ${avis.prenom} </p>
+                            <p> ${avis.typeExperience} </p>
+                            <p> ${avis.commentaire} </p>
+                            <p> ★ ${avis.note}/5</p>
+                        </div> `
+}
